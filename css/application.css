@@ -1,0 +1,124 @@
+body {
+  font-family: 'Caveat', cursive; }
+  body div#head {
+    border-bottom: 1px solid black;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row; }
+    body div#head div.container {
+      width: 50%; }
+      body div#head div.container:last-child {
+        display: none; }
+        @media screen and (min-width: 430px) {
+          body div#head div.container:last-child {
+            display: block;
+            text-align: right; } }
+      body div#head div.container h1 {
+        text-align: left;
+        font-size: 6rem; }
+      body div#head div.container img {
+        width: 175px; }
+      body div#head div.container div#credit {
+        font-size: .1rem; }
+  body div#userInput {
+    border-bottom: 1px solid black;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: .5rem; }
+    @media screen and (min-width: 768px) {
+      body div#userInput {
+        width: 48%;
+        float: left;
+        margin: 0 1%;
+        display: flex;
+        flex-direction: column;
+        border-bottom: none; } }
+    body div#userInput div.container h2 {
+      font-size: 2rem;
+      margin: 1rem;
+      text-align: center; }
+    body div#userInput div.container label {
+      margin: 1rem 0;
+      font-size: 1.25rem;
+      font-family: 'Amiri', serif; }
+    body div#userInput div.container input#postTitle {
+      border: 2px solid black;
+      border-radius: 4px;
+      margin: 1rem 0;
+      width: 12rem; }
+    body div#userInput div.container textarea#postContent {
+      width: 90%;
+      margin: 1rem auto;
+      resize: none;
+      border: 2px solid black;
+      border-radius: 4px; }
+    body div#userInput div.container button#submitPost {
+      border: 1px solid black;
+      border-radius: 4px;
+      margin-left: 1rem;
+      width: 10rem;
+      font-size: 1.5rem; }
+  body div#posting {
+    width: 90%;
+    margin: 0 auto; }
+    @media screen and (min-width: 768px) {
+      body div#posting {
+        width: 48%;
+        float: right;
+        margin: 0 1%; } }
+    body div#posting > h2 {
+      font-size: 2rem;
+      margin: 1rem;
+      text-align: center; }
+    body div#posting div.container {
+      border-bottom: 1px solid black; }
+      body div#posting div.container div.heading h2 {
+        text-decoration: underline;
+        font-size: 1.25rem;
+        text-align: left;
+        font-weight: bold; }
+      body div#posting div.container div.content {
+        width: 100%;
+        text-align: justify;
+        text-justify: inter-word;
+        margin: .5rem 0; }
+        body div#posting div.container div.content p {
+          font-family: 'Amiri', serif;
+          text-indent: 2rem; }
+      body div#posting div.container div.comment {
+        padding: .25rem; }
+        body div#posting div.container div.comment p {
+          margin: .25rem 0;
+          padding: .25rem;
+          width: 75%;
+          border: 1px solid black;
+          border-radius: 4px;
+          font-family: 'Amiri', serif; }
+        body div#posting div.container div.comment div.arrow {
+          width: 0;
+          height: 0;
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+          border-bottom: 7px solid black; }
+      body div#posting div.container div.addComment {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem; }
+        body div#posting div.container div.addComment textarea.commentText {
+          resize: none;
+          border: 2px solid black;
+          border-radius: 4px; }
+          @media screen and (min-width: 768px) {
+            body div#posting div.container div.addComment textarea.commentText {
+              width: 50%; } }
+        body div#posting div.container div.addComment label {
+          margin: 1rem 0;
+          font-size: 1rem;
+          font-family: 'Amiri', serif; }
+        body div#posting div.container div.addComment button.submitComment {
+          border: 1px solid black;
+          border-radius: 4px;
+          width: 10rem; }
+
+/*# sourceMappingURL=application.css.map */
