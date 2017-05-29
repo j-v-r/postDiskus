@@ -38,8 +38,6 @@ function addDate() {
 	return n;
 }
 
-console.log(addDate());
-
 postSubmitBtn.click((e) => {
 	var postings = $('#posting');
 	var postTitle = document.getElementById('postTitle');
@@ -49,12 +47,26 @@ postSubmitBtn.click((e) => {
 
 	var postHtml = createPostHtml(postTitleText, postContentText, addDate());
 
-	if(postTitleText != '' && postContentText != '') {
-		postings.append(postHtml);
-	}
+	$(postTitle).removeClass('error');
+	$(postContent).removeClass('error');
 
-	postTitle.value = '';
-	postContent.value = '';
+	if(postTitleText == '' && postContentText == '') {
+		$(postTitle).addClass('error');
+		$(postContent).addClass('error');
+	}
+	else if(postContentText == '') {
+		$(postContent).addClass('error');
+	}
+	else if(postTitleText == '') {
+		$(postTitle).addClass('error');
+	}
+	else {
+		$(postTitle).removeClass('error');
+		$(postContent).removeClass('error');
+		postings.append(postHtml);
+		postTitle.value = '';
+		postContent.value = '';
+	}
 
 });
 
@@ -63,10 +75,23 @@ $('#posting').on('click', 'button', (e) => {
 	var sumbitLabel = e.target.previousElementSibling;
 	var commentText = sumbitLabel.previousElementSibling.value;
 	var commentHtml = createCommentHtml(commentText, addDate());
-
-	if(commentText != '') {
+	if(commentText == '') {
+		$(sumbitLabel.previousElementSibling).addClass('error');
+	}
+	else {
+		$(sumbitLabel.previousElementSibling).removeClass('error');
 		$(commentHtml).insertBefore(thisAddCommentDiv);
 	}
 	sumbitLabel.previousElementSibling.value = '';
 });
+
+
+
+
+
+
+
+
+
+
 

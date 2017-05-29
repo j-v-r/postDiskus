@@ -47,12 +47,16 @@ body {
       border-radius: 4px;
       margin: 1rem 0;
       width: 12rem; }
+      body div#userInput div.container input#postTitle.error {
+        border: 2px solid red; }
     body div#userInput div.container textarea#postContent {
       width: 90%;
       margin: 1rem auto;
       resize: none;
       border: 2px solid black;
       border-radius: 4px; }
+      body div#userInput div.container textarea#postContent.error {
+        border: 2px solid red; }
     body div#userInput div.container button#submitPost {
       border: 1px solid black;
       border-radius: 4px;
@@ -109,6 +113,8 @@ body {
           resize: none;
           border: 2px solid black;
           border-radius: 4px; }
+          body div#posting div.container div.addComment textarea.commentText.error {
+            border: 2px solid red; }
           @media screen and (min-width: 768px) {
             body div#posting div.container div.addComment textarea.commentText {
               width: 50%; } }

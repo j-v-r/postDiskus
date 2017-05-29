@@ -73,6 +73,9 @@ body {
 				border-radius: 4px;
 				margin: 1rem 0;
 				width: 12rem;
+				&.error {
+					border: 2px solid red;
+				}
 			}
 
 			textarea#postContent {
@@ -81,6 +84,9 @@ body {
 				resize: none;
 				border: 2px solid black;
 				border-radius: 4px;
+				&.error {
+					border: 2px solid red;
+				}
 			}
 
 			button#submitPost {
@@ -170,6 +176,9 @@ body {
 					resize: none;
 					border: 2px solid black;
 					border-radius: 4px;
+					&.error {
+						border: 2px solid red;
+					}
 
 					@media screen and (min-width: 768px) {
 						width: 50%;
